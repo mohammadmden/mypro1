@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMTEAM🦾</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="contant as.css">
+</head>
+<body>
+    <div class="container">
+       <div class="row">
+        <div class="col-12 col-md-6">
+            <form action="" id="form">
+                <h1>Register</h1>
+                <div class="input-control">
+                    <label for="username">username</label>
+                    <input type="text" id="username" name="username">
+                    <div class="error text-danger  text-center fw-bold" id="usererror"></div>
+                    <br>
+                </div>
+                <div class="input-control">
+                    <label for="email">email</label>
+                    <input type="text" id="email" name="username">
+                    <div class="error text-danger text-center fw-bold" id="emailerror"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">password</label>
+                    <input type="password" id="password" name="password">
+                    <div class="error text-danger  text-center fw-bold " id="passerror"></div>
+    
+                </div>
+                <div class="input-control">
+                    <!-- <label for="password">password again</label> -->
+                    <!-- <input type="password" id="password2" name="password2"> -->
+                    <div class="error"></div>
+                </div>
+                <!-- <div class="jnseat">
+                    <label for="Man">Man</label>
+                    <input type="checkbox" name="fname" id="mard">
+                    <div class="" id="checkbox2"></div>
+    
+                    <label for="Man">Female</label>
+                    <input type="checkbox" name="fname" id="mard">
+                    <div class="" id="checkbox2"></div>
+                    
+                </div> -->
+                <button type="submit">sign up</button>
+            </form>
+        </div>
+        <div class="col-12 col-md-6">
+            <form action="" class="">
+                <!-- <label for="textar">Write if you have a suggestion</label> -->
+                <!-- <textarea  class="textare rounded-3 border-2 border border-black" name="" id="" cols="" rows="5" placeholder="Write if you have a suggestion"></textarea> -->
+                <!-- <button></button> -->
+               <!-- <div class="submit2"> <button type="" class="btn btn-black bg-black text-white">send</button></div> -->
+               <!-- <h2>Permanent Address</h2> -->
+               <textarea placeholder="Write if you have a suggestion" id="txtarea_consolidation" class=" textare rounded-3 border-2 border border-black marginb" ></textarea><br />
+               
+               <div class="submit2"><button  onclick="javascript:validate();" class="btn btn-black bg-black text-white" >send</button></div>
+               <div class="text-center text-danger mt-custom-m fw-bold" id="suberortextare"></div>
+            </form>
+        </div>
+       </div>
+
+    </div>
+    <script type="text/javascript">
+      
+        const form = document.querySelector('form');
+        form.addEventListener('submit',validata)
+
+        function validata(event){
+            const username =document.getElementById('username');
+            const password =document.getElementById('password');
+            const usererror = document.getElementById('usererror');
+            const passerror = document.getElementById('passerror');
+            const email =document.getElementById('email');
+            const emailerror =document.getElementById('emailerror');
+            const simpleEmail= /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            emailerror.textContent='';
+    
+            usererror.textContent='';
+            passerror.textContent='';
+
+            if(!simpleEmail.test(email.value)){
+                emailerror.textContent='Enter a valid email';
+                event.preventDefault();
+            }
+
+            if(username.value.length<5 || username.value.length>15){
+                // alert('error')
+                usererror.textContent='Username must be between 5 and 15 characters';
+                event.preventDefault();
+            }
+             if(password.value.length<6 ||password.value.length>20 ){
+                // alert('error')
+                passerror.textContent='Password must be between 6 and 20 characters';
+                event.preventDefault();
+            }
+        }
+        function validate(e){
+            const txtarea_consolidation = document.getElementById('txtarea_consolidation')
+            const suberortextare = document.getElementById('suberortextare')
+            suberortextare.textContent='';
+
+               if (document.getElementById("txtarea_consolidation").value == ""){
+                suberortextare.textContent='Please complete';
+                   document.getElementById("txtarea_consolidation").focus();
+                   event.preventDefault();
+               }
+               
+            }
+
+
+    </script>
+    
+</body>
+</html>

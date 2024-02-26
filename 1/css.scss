@@ -1,0 +1,21 @@
+// $coloe: rgb(244, 3, 3);
+// $bs:border-box;
+$bgasli:black;
+$texasli:white;
+$texsabzorbgsabz:rgb(171, 255, 3);
+$fonsarbarg:2rem;
+$borderradi:10px;
+body{
+    background-color: $bgasli;
+    color: $texasli;
+    padding: 0;
+    margin: 0;
+}
+.sabz-sa{
+    color: $texsabzorbgsabz;
+    font-size: $fonsarbarg;
+
+}
+@import 'import.scss';
+
+

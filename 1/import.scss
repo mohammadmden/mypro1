@@ -1,0 +1,24 @@
+@mixin mainmenu{
+    background-color: $texsabzorbgsabz;
+    // padding: 0 50px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: $borderradi;
+}
+
+.menu{
+    padding-top: 10px;
+    .main{
+        @include mainmenu();
+        a{
+            text-decoration: none;
+            color: $bgasli;
+            padding-right: 30px;
+            // padding-top:20px ;
+            // padding-left: 10px;
+            // padding-top: 30px;
+            // padding: 15px;
+            font-weight: 500;
+        }
+    }
+}

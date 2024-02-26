@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.sabz-sa {
+  color: rgb(171, 255, 3);
+  font-size: 2rem;
+}
+
+.menu {
+  padding-top: 10px;
+}
+.menu .main {
+  background-color: rgb(171, 255, 3);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 10px;
+}
+.menu .main a {
+  text-decoration: none;
+  color: black;
+  padding-right: 30px;
+  font-weight: 500;
+}/*# sourceMappingURL=css.css.map */
